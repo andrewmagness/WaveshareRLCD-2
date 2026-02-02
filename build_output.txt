@@ -1,0 +1,36 @@
+﻿C:\Users\magne\.espres
+sif\python_env\idf5.4_
+py3.11_env\Scripts\pyt
+hon.exe : Setting 
+IDF_PATH environment 
+variable: C:\Users\mag
+ne\esp\v5.4.1\esp-idf
+At line:1 char:1
++ C:\Users\magne\.espr
+essif\python_env\idf5.
+4_py3.11_env\Scripts\p
+ython ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (Setting ID   
+ F_PAT...\v5.4.1\e    
+sp-idf:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+WARNING: The 
+IDF_PYTHON_ENV_PATH 
+is missing in 
+environmental 
+variables!
+ESP-IDF v5.4.1
+"cmake" must be 
+available on the PATH 
+to use idf.py
+Executing action: all (aliases: build)
