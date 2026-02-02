@@ -212,7 +212,7 @@ void dashboard_create(lv_obj_t *parent) {
 
   // Temperature label (large)
   temp_label = lv_label_create(dashboard_cont);
-  lv_label_set_text(temp_label, "--.-°F");
+  lv_label_set_text(temp_label, "--.- F");
   lv_obj_set_pos(temp_label, 15, content_y + 145); // Moved up
   lv_obj_set_style_text_font(temp_label, &lv_font_MISANSMEDIUM_25, 0);
   lv_obj_set_style_text_color(temp_label, lv_color_black(), 0);
@@ -409,7 +409,7 @@ void dashboard_update_climate(float temp_f, float humidity) {
 
   if (temp_label) {
     // Format: XX.X F (degree symbol may not be in font, use 'o' as fallback)
-    snprintf(buf, sizeof(buf), "%.1f°F", temp_f);
+    snprintf(buf, sizeof(buf), "%.1f F", temp_f);
     lv_label_set_text(temp_label, buf);
   }
 
