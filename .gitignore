@@ -65,6 +65,7 @@ env/
 .clangd/
 .ccls-cache/
 .cache/
+.devcontainer/
 compile_commands.json
 
 # Windows specific
