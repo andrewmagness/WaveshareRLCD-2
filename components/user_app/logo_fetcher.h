@@ -34,17 +34,6 @@ void logo_fetcher_init(void);
  */
 bool logo_fetcher_get(const char *url, logo_data_t *out_logo);
 
-/**
- * @brief Free logo data
- * @param logo Logo to free
- */
-void logo_fetcher_free(logo_data_t *logo);
-
-/**
- * @brief Clear in-memory logo cache (call when games data changes)
- */
-void logo_fetcher_clear_cache(void);
-
 #ifdef __cplusplus
 }
 #endif

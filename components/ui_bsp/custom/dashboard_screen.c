@@ -4,7 +4,6 @@
 #include <stdio.h>
 
 // Declare external fonts from gui_guider.h
-LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_MISANSMEDIUM_20)
 LV_FONT_DECLARE(lv_font_MISANSMEDIUM_25)
 LV_FONT_DECLARE(lv_font_MISANSMEDIUM_18)
@@ -40,7 +39,6 @@ static lv_img_dsc_t logo_dsc_g2_home;
 // Win3.1 style dimensions
 #define TITLE_BAR_H 22
 #define BORDER_W 3
-#define INNER_BORDER 2
 
 // Battery icon dimensions
 #define BATT_W 24
@@ -158,9 +156,9 @@ void dashboard_create(lv_obj_t *parent) {
   lv_obj_set_style_bg_opa(title_bar, LV_OPA_COVER, 0);
   lv_obj_clear_flag(title_bar, LV_OBJ_FLAG_SCROLLABLE);
 
-  // Title text "MagsRLCD" - centered, white on black
+  // Title text - centered, white on black
   lv_obj_t *title_label = lv_label_create(title_bar);
-  lv_label_set_text(title_label, "MagsRLCD");
+  lv_label_set_text(title_label, "RLCD");
   lv_obj_set_style_text_font(title_label, &lv_font_montserrat_14, 0);
   lv_obj_set_style_text_color(title_label, lv_color_white(), 0);
   lv_obj_center(title_label);

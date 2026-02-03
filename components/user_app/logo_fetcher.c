@@ -4,7 +4,6 @@
 #include "esp_http_client.h"
 #include "esp_log.h"
 #include "lvgl.h"
-#include <dirent.h>
 #include <string.h>
 #include <sys/stat.h>
 
@@ -76,17 +75,6 @@ void logo_fetcher_init(void) {
 
   ESP_LOGI(TAG, "Logo fetcher initialized (SD cache: %s)",
            sd_available ? "enabled" : "disabled");
-}
-
-void logo_fetcher_clear_cache(void) {
-  for (int i = 0; i < cache_count; i++) {
-    if (logo_cache[i].data) {
-      free(logo_cache[i].data);
-    }
-  }
-  memset(logo_cache, 0, sizeof(logo_cache));
-  cache_count = 0;
-  ESP_LOGI(TAG, "In-memory logo cache cleared");
 }
 
 // Extract team ID from ESPN logo URL
@@ -526,11 +514,4 @@ bool logo_fetcher_get(const char *url, logo_data_t *out_logo) {
 
   return true;
 #endif
-}
-
-void logo_fetcher_free(logo_data_t *logo) {
-  if (logo && logo->data) {
-    free(logo->data);
-    memset(logo, 0, sizeof(logo_data_t));
-  }
 }

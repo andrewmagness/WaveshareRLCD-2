@@ -10,7 +10,6 @@ extern "C" {
 #include "dashboard_screen.h"
 
 void sports_scores_init(void);
-bool sports_scores_get_current(game_info_t *game);
 int sports_scores_get_games(game_info_t *games, int max_to_get);
 
 #ifdef __cplusplus

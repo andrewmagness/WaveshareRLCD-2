@@ -1,10 +1,8 @@
 #include "sports_scores.h"
 #include "cJSON.h"
 #include "esp_crt_bundle.h"
-#include "esp_heap_caps.h"
 #include "esp_http_client.h"
 #include "esp_log.h"
-#include "esp_tls.h"
 #include "esp_wifi_bsp.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
@@ -310,10 +308,6 @@ static void http_test_task(void *pvParameters) {
 void sports_scores_init(void) {
   games_mutex = xSemaphoreCreateMutex();
   xTaskCreate(http_test_task, "curr_games_task", 20480, NULL, 5, NULL);
-}
-
-bool sports_scores_get_current(game_info_t *game) {
-  return sports_scores_get_games(game, 1) > 0;
 }
 
 int sports_scores_get_games(game_info_t *games, int max_to_get) {
