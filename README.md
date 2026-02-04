@@ -1,6 +1,7 @@
 # Waveshare RLCD Dashboard
 
 A dashboard project for the Waveshare RLCD 4.2 devboard. The dashboard displays real-time sports scores, local temp/humidity data, and system status markers.
+![Image](https://github.com/user-attachments/assets/d8ebd071-0091-411d-88b0-8cd5ce153c46)
 
 ## Features
 
